@@ -1,0 +1,14 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '11.1'
+
+target 'PaymentModel' do
+	# Pods for Paypal
+  
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Stripe
+  pod 'Stripe'
+  pod 'Alamofire'
+  pod ‘PayPal-iOS-SDK’
+end

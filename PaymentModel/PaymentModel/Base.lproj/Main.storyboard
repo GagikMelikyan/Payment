@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tpj-zF-oQ6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PaymentModel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="zbs-fA-kgN">
+                                <rect key="frame" x="103.5" y="188" width="207" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWT-wL-Mjc">
+                                <rect key="frame" x="103.5" y="312" width="207" height="36"/>
+                                <color key="backgroundColor" red="0.90931171180000003" green="0.70783120389999998" blue="0.13856983179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Pay via Stripe">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToStripe" destination="BYZ-38-t0r" eventType="touchUpInside" id="69G-Ej-zfk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgc-aS-KbG">
+                                <rect key="frame" x="103.5" y="256" width="207" height="36"/>
+                                <color key="backgroundColor" red="0.90931171180000003" green="0.70783120389999998" blue="0.13856983179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Pay via PayPal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="paymentBtnPayPal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Dc-qa-28q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30875444410000003" green="0.88989502190000003" blue="0.75884342189999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wWT-wL-Mjc" firstAttribute="width" secondItem="mgc-aS-KbG" secondAttribute="width" id="3qT-go-9wY"/>
+                            <constraint firstItem="mgc-aS-KbG" firstAttribute="centerX" secondItem="zbs-fA-kgN" secondAttribute="centerX" id="QVK-MN-OyM"/>
+                            <constraint firstItem="zbs-fA-kgN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="V0n-B1-dHE"/>
+                            <constraint firstItem="wWT-wL-Mjc" firstAttribute="centerX" secondItem="mgc-aS-KbG" secondAttribute="centerX" id="cIU-my-n8N"/>
+                            <constraint firstItem="zbs-fA-kgN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="ccO-2H-y04"/>
+                            <constraint firstItem="zbs-fA-kgN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cwv-7H-Nn2"/>
+                            <constraint firstItem="mgc-aS-KbG" firstAttribute="width" secondItem="zbs-fA-kgN" secondAttribute="width" id="d1o-Ek-dj9"/>
+                            <constraint firstItem="wWT-wL-Mjc" firstAttribute="top" secondItem="mgc-aS-KbG" secondAttribute="bottom" constant="20" id="hX4-pr-5Xi"/>
+                            <constraint firstItem="mgc-aS-KbG" firstAttribute="top" secondItem="zbs-fA-kgN" secondAttribute="bottom" constant="34" id="pqJ-EM-WPj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zvf-T4-gb3"/>
+                    <connections>
+                        <outlet property="amauntTextField" destination="zbs-fA-kgN" id="dWE-3L-LIG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1130" y="-565"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1sP-cA-pyX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tpj-zF-oQ6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ced-B1-Oxd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gBR-57-Zpn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1k-tO-69I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166.66666666666669" y="-565.17857142857144"/>
+        </scene>
+    </scenes>
+</document>
